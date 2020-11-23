@@ -1,0 +1,74 @@
+@import "../generic-styles";
+
+$MaxWidthSmallScreen: 375px;
+$CircleButtonDiametr: 80px;
+
+.App {
+  padding: 65px 34px;
+  height: calc(100vh - 60px);
+  min-height: 100%;
+
+  display: flex;
+  flex: 1;
+
+  font-weight: 700;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: $MaxWidthSmallScreen;
+  max-height: 815px;
+}
+
+.close-button{
+  display: none;
+}
+
+@media (min-width: $breakpoint-phone) {
+  body > #root > div {
+    height: 100vh;
+  }
+  .App{
+    justify-content: center;
+    padding: 0;
+  }
+
+  .container {
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+    margin: 30px;
+    white-space: nowrap;
+  }
+
+  h3{
+    align-self: center;
+    
+  }
+
+  h4{
+    text-align: center;
+  }
+
+  .close-button{
+    display: flex;
+    position: absolute;
+    margin-left: calc(#{$MaxWidthSmallScreen});
+
+    justify-content: center;
+    align-items: center;
+    min-width: $CircleButtonDiametr;
+    min-height: $CircleButtonDiametr;
+
+    border-radius: 50%;
+    border-width: 1px;
+    border-color: #999999;
+    background-color: transparent;
+  }
+  .primary-button{
+    margin-top: 100px;
+  }
+}

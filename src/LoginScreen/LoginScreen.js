@@ -1,8 +1,8 @@
-import './App.scss';
-import InputField from './Components/InputField'
-import LoginImage from './Images/LoginImage.png'
+import './LoginScreen.scss';
+import InputField from '../Components/InputField'
+import LoginImage from '../Images/LoginImage.png'
 
-function App() {
+function LoginScreen() {
   return (
     <div className="App">
       <div className="container">
@@ -16,4 +16,4 @@ function App() {
   );
 }
 
-export default App;
+export default LoginScreen;

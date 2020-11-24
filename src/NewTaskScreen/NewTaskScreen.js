@@ -1,6 +1,6 @@
-import './NewTaskScreen.scss';
 import WideInputField from '../Components/WideInputField'
 import Cross from '../Images/cross.svg'
+import './NewTaskScreen.scss';
 
 function NewTaskScreen() {
   return (

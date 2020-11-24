@@ -1,29 +1,16 @@
-@import "../generic-styles";
+@import '../generic-styles';
 
-$MaxWidthSmallScreen: 375px;
 $CircleButtonDiametr: 80px;
 
 .App {
-  padding: 65px 34px;
-  height: calc(100vh - 60px);
-  min-height: 100%;
-
-  display: flex;
-  flex: 1;
-
-  font-weight: 700;
+  @include  mobile-app-generic;
 }
 
 .container {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  justify-content: flex-start;
-  max-width: $MaxWidthSmallScreen;
-  max-height: 815px;
+  @include mobile-container-generic;
 }
 
-.close-button{
+.close-button {
   display: none;
 }
 
@@ -31,7 +18,9 @@ $CircleButtonDiametr: 80px;
   body > #root > div {
     height: 100vh;
   }
-  .App{
+
+  .App {
+    display: flex;
     justify-content: center;
     padding: 0;
   }
@@ -44,16 +33,15 @@ $CircleButtonDiametr: 80px;
     white-space: nowrap;
   }
 
-  h3{
+  h3 {
     align-self: center;
-    
   }
 
-  h4{
+  h4 {
     text-align: center;
   }
 
-  .close-button{
+  .close-button {
     display: flex;
     position: absolute;
     margin-left: calc(#{$MaxWidthSmallScreen});
@@ -68,7 +56,7 @@ $CircleButtonDiametr: 80px;
     border-color: #999999;
     background-color: transparent;
   }
-  .primary-button{
+  .primary-button {
     margin-top: 100px;
   }
 }

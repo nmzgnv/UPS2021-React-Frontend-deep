@@ -1,9 +1,24 @@
-$FontColor: #323232;
-$InputFontColor: #999999;
-$InputFieldPadding: 20px;
-$InputFieldRadius: 10px;
-$ButtonsColor: #ffe3d3;
-$breakpoint-phone: 600px;
+@import './_variables';
+
+@mixin mobile-app-generic{
+    padding: 65px $MobileHorizontalPadding;
+    height: calc(100vh - 60px);
+    min-height: 100%;
+
+    display: flex;
+    flex: 1;
+
+    font-weight: $FontWeightBase;
+}
+
+@mixin mobile-container-generic{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 100%;
+    max-height: 815px;
+}
 
 h3 {
     font-size: 48px;
@@ -17,6 +32,7 @@ h4 {
     line-height: 24px;
     color: $FontColor;
     margin: 0px 0px;
+    word-break: break-all;
 }
 
 .primary-button {
@@ -39,35 +55,14 @@ h4 {
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.08);
 }
 
-.input-field {
-    width: calc(100% - #{$InputFieldPadding * 2});
-    height: 60px;
-    border-radius: $InputFieldRadius;
-    border-width: 0;
-    margin: 30px auto;
-    padding: 0 $InputFieldPadding;
-    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.08);
-}
-
-.wide-input-field {
-    width: 100%;
-    resize: none;
-    min-height: 120px;
-    border-radius: $InputFieldRadius;
-    border-width: 0;
-    margin: 30px 0;
-    padding: $InputFieldPadding $InputFieldPadding 0;
-    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.08);
-
-    box-sizing: border-box;
-    display: block;
-}
-
-
-input::placeholder,
-textarea::placeholder {
+@mixin input-placeholder{
     font-size: 14px;
     line-height: 16px;
     color: $InputFontColor;
     margin-left: 40px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    @include input-placeholder;
 }

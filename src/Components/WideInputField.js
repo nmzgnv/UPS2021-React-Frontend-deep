@@ -1,4 +1,5 @@
 import React from 'react';
+import './WideInputField.scss';
 
 class WideInputField extends React.PureComponent {
     constructor(props) {

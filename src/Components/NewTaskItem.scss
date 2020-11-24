@@ -1,0 +1,38 @@
+@import "../variables";
+
+$VerticalPadding: 16px;
+$HorizontalPadding: 10px;
+$GenericFontSize: 14px; 
+$GenericFontHeight: 16px; 
+
+.new-task-item {
+    display: none;
+}
+
+@media (min-width: $breakpoint-phone) {
+    .new-task-item {
+        margin-bottom: 0;
+        display: flex;
+        flex:1;
+        flex-direction: column;
+        background-color: #F6F6F6;
+
+        min-height: 150px;
+        border-radius: 9px;
+        padding: $VerticalPadding $HorizontalPadding;
+        align-self: flex-start;
+        align-content: center;
+        text-align: center;
+        justify-content: center;
+    
+        p {
+            margin-top: 26px;
+            font-weight: 900;
+            line-height: 21px;
+            font-size: 18px;
+            color: $FontColor;
+            word-break: break-all; 
+        }    
+    }
+}
+

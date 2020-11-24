@@ -1,0 +1,94 @@
+@import "../generic-styles";
+
+.App {
+  @include mobile-app-generic;
+}
+
+.container {
+  @include mobile-container-generic;
+  h3 {
+    margin: 0;
+  }
+}
+
+.new-task-item{
+  display: none;
+}
+
+.list-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.circle-button {
+  position: fixed;
+  bottom: 34px;
+  right: 20px;
+
+  width: 51px;
+  height: 51px;
+  background-color: $ButtonsColor;
+  border-width: 0;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: $breakpoint-phone) {
+  body > #root > div {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+
+    -ms-overflow-style: none; // Firefox and Explorer
+    scrollbar-width: none;
+  }
+
+  html::-webkit-scrollbar {
+    width: 0px; /* For Chrome, Safari, and Opera */
+  }
+
+  .App {
+    justify-content: center;
+    flex: 1;
+    padding-left: 0;
+  }
+
+  .container {
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    white-space: normal;
+  }
+
+  .list-container {
+    margin: 0 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-flow: dense;
+    grid-auto-rows: min-content;
+    gap: 30px 30px;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  .circle-button {
+    display: None;
+  }
+
+  .new-task-item{
+    display: inline-block;
+  }
+
+  .___scroll-renderer-anchor{
+    display: none;
+  }
+}

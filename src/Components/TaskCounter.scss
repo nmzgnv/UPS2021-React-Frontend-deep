@@ -20,10 +20,18 @@
     }
 }
 
+.helper-text{
+    display: none;
+}
+
 @media (min-width: $breakpoint-phone) {
     .task-counter {
         display: flex;
         position: absolute;
-        right: calc(#{$MobileHorizontalPadding} * 3);
+        margin-right: 0;
+    }
+
+    .helper-text{
+        display: block;
     }
 }

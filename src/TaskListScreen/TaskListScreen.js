@@ -14,6 +14,12 @@ var items = [
   new Task(uuid(), 'JINGU-BEST-JINGU-BEST-JINGU-BEST-JINGU-BEST', new Date(2021, 7, 5)),
   new Task(uuid(), 'JINGU-BEST-JINGU-BEST-JINGU-BEST-JINGU-BEST', new Date(2021, 7, 5)),
   new Task(uuid(), 'JINGU-BEST-JINGU-BEST-JINGU-BEST-JINGU-BEST', new Date(2021, 7, 5)),
+  new Task(uuid(), 'Do a workout', new Date(2020, 1)),
+  new Task(uuid(), 'Study english', new Date(2020, 6, 30)),
+  new Task(uuid(), 'big-world-big-world-big-world-big-world-big-world-big-world-big-world-big-world-big-world-big-world-big-world-big-world', new Date(2021, 7, 5)),
+  new Task(uuid(), 'JINGU-BEST-JINGU-BEST-JINGU-BEST-JINGU-BEST', new Date(2021, 7, 5)),
+  new Task(uuid(), 'JINGU-BEST-JINGU-BEST-JINGU-BEST-JINGU-BEST', new Date(2021, 7, 5)),
+  new Task(uuid(), 'JINGU-BEST-JINGU-BEST-JINGU-BEST-JINGU-BEST', new Date(2021, 7, 5)),
 ]
 
 const renderItem = (item, id) => {

@@ -6,7 +6,7 @@ $GenericFontSize: 14px;
 $GenericFontHeight: 16px; 
 
 .task-list-item {
-    margin-bottom: 0;
+    margin-bottom: 23px;
     display: flex;
     flex:1;
     flex-direction: column;
@@ -60,6 +60,7 @@ $GenericFontHeight: 16px;
 
 @media (min-width: $breakpoint-phone) {
     .task-list-item {
+        margin-bottom: 0;
         display: inline-block;
         align-self: flex-start;
         align-items: center;

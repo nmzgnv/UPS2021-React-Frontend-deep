@@ -7,6 +7,7 @@ const NewTaskItem = () => {
         <li className='new-task-item'>
             <img src={CrossImage}></img>
             <p>Create new task</p>
+            
         </li>
     );
 }

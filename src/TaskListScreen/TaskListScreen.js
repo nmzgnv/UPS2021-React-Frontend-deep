@@ -1,4 +1,4 @@
-import './TaskListScreen.scss';
+import styles from './TaskListScreen.scss';
 import TaskCounter from '../Components/TaskCounter';
 import TaskListItem from '../Components/TaskListItem';
 import Task from '../Task';

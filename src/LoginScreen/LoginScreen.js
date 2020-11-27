@@ -1,17 +1,19 @@
-import './LoginScreen.scss';
+import styles from './LoginScreen.module.scss';
 import InputField from '../Components/InputField'
 import LoginImage from '../Images/LoginImage.png'
+import { useHistory } from 'react-router-dom';
+import history from '../history';
 
 function LoginScreen() {
   return (
-    <div className="App">
-      <div className="container">
-          <h3>Welcome to a todo app</h3>
-          <InputField label="Email"></InputField>
-          <InputField label="Password"></InputField>
-          <button className="primary-button">Login</button>
+    <div className={styles["App"]}>
+      <div className={styles["container"]}>
+        <h3>Welcome to a todo app</h3>
+        <InputField label="Email"></InputField>
+        <InputField label="Password" password={true}></InputField>
+        <button className={styles["primary-button"]} onClick={() => history.push("/tasks")}>Login</button>
       </div>
-      <img className="media" src={LoginImage} alt='Image'></img>
+      <img className={styles["media"]} src={LoginImage} alt='Image'></img>
     </div>
   );
 }

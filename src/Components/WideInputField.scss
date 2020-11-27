@@ -1,4 +1,4 @@
-@import '../variables';
+@import "../variables";
 
 .wide-input-field {
     width: 100%;
@@ -12,4 +12,9 @@
 
     box-sizing: border-box;
     display: block;
+}
+
+form {
+    width: 100%;
+    max-width: 700px;
 }

@@ -11,7 +11,7 @@
   }
 }
 
-.new-task-item{
+.new-task-item {
   display: none;
 }
 
@@ -44,13 +44,6 @@
     left: 0;
     width: 100%;
     overflow: hidden;
-
-    -ms-overflow-style: none; // Firefox and Explorer
-    scrollbar-width: none;
-  }
-
-  html::-webkit-scrollbar {
-    width: 0px; /* For Chrome, Safari, and Opera */
   }
 
   .App {
@@ -58,9 +51,8 @@
     justify-content: center;
     display: flex;
     flex: 1;
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 0;
+    padding: 0;
+    padding-top: 130px;
   }
 
   .container {
@@ -89,15 +81,22 @@
     text-align: start;
   }
 
+  h4 {
+    align-self: flex-start;
+  }
+
   .circle-button {
     display: None;
   }
 
-  .new-task-item{
+  .new-task-item {
     display: inline-block;
   }
 
-  .___scroll-renderer-anchor{
-    display: none;
+  :global {
+    // ignore hashing
+    .___scroll-renderer-anchor {
+      display: none;
+    }
   }
 }

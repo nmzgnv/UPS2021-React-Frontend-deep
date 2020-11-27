@@ -2,8 +2,8 @@
 
 $VerticalPadding: 16px;
 $HorizontalPadding: 10px;
-$GenericFontSize: 14px; 
-$GenericFontHeight: 16px; 
+$GenericFontSize: 14px;
+$GenericFontHeight: 16px;
 
 .new-task-item {
     display: none;
@@ -13,26 +13,40 @@ $GenericFontHeight: 16px;
     .new-task-item {
         margin-bottom: 0;
         display: flex;
-        flex:1;
+        flex: 1;
         flex-direction: column;
-        background-color: #F6F6F6;
+        justify-content: stretch;
+        background-color: #f6f6f6;
 
-        min-height: 150px;
+        height: 100%;
+        min-height: 140px;
         border-radius: 9px;
-        padding: $VerticalPadding $HorizontalPadding;
-        align-self: flex-start;
-        align-content: center;
-        text-align: center;
-        justify-content: center;
-    
+
         p {
             margin-top: 26px;
+            margin-bottom: 0;
             font-weight: 900;
             line-height: 21px;
             font-size: 18px;
             color: $FontColor;
-            word-break: break-all; 
-        } 
+            word-break: break-all;
+        }
+
+        a {
+            margin-bottom: 0;
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            background-color: transparent;
+
+            border-radius: 9px;
+            align-content: center;
+            text-align: center;
+            justify-content: center;
+        }
+
+        a:hover {
+            background-color: $ButtonsColor;
+        }
     }
 }
-
